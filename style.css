@@ -1,50 +1,72 @@
 body {
-    padding-top: 100px;
-    overflow: hidden;
+  padding-top: 100px;
+  overflow: hidden;
 }
 
-.page {
-    width: 100vw;
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    scroll-snap-align: start;
-    background-color: #FCA311;
+.section-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  scroll-snap-align: start;
+}
+
+.section-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  scroll-snap-align: start;
 }
 
 .container-fluid {
-    overflow: hidden;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+  scroll-snap-type: y mandatory;
+  padding: 10px;
 }
 
 .card-text {
-    font-size: 20px;
-    color: #FFFFFF;
-    word-break: initial;
-    word-wrap: break-word;
+  font-size: 25px;
+  color: #ffffff;
+  word-break: initial;
+  word-wrap: break-word;
 }
 
 .card-title {
-    font-size: 30px;
-    text-align: center;
-    color: #000000;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 10px;
-    width: fit-content;
+  font-size: 35px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  width: fit-content;
 }
 
 .card-body {
-    border-radius: 10px;
-    padding: 10px;
+  border-radius: 10px;
+  background-color: #ffb703;
+  height: 50vh;
 }
 
-.title {
-    color: #FFFFFF;
+.navbar-collapse {
+  color: cadetblue;
 }
 
-.img {
-    width: 100%;
-    height: auto;
+.navbar {
+  height: 15vh;
+  min-height: 90px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    height: 10vh;
   }
+
+  .section-row {
+    flex-direction: column;
+  }
+
+  #teste {
+    display: none;
+  }
+}
