@@ -66,7 +66,11 @@ body {
     flex-direction: column;
   }
 
-  #teste {
+  #img-sobre {
     display: none;
+  }
+
+  .card-body {
+    height: auto;
   }
 }
